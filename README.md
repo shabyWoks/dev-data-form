@@ -1,27 +1,28 @@
-# DataForm
+Data-Form
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
+It will provide you the html form skeleton upon getting the input object.
 
-## Development server
+Generating form
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Create a variable of FormInputDataArgs for every control you want.
+FormInputDataArgs data= new FormInputDataArgs();
 
-## Code scaffolding
+data.type= type of control,
+data.labelName= "someName",
+data.placeHolder= "somePlaceHolderName",
+data.inputProp.type= "text/password/email/number/etc",
+data.inputProp.id= "someUniqueId",
+data.inputProp.minLen= "minLimitOfTextLength",
+data.inputProp.maxLen= "maxLimitOfTextLength",
+data.inputProp.notAllowed= "characters, separated, in, commas",
+data.inline= "true/false for checkboxes and radio buttons"
+data.options= [Arrays of Options i.e. key pair values]
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+1. For Input text box do the following
+type, labelName, placeHolder, inputProp.type, inputProp.id, inputProp.minLen, inputProp.maxLen, inputProp.notAllowed
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+2. For Input text box do the following
+type, labelName, placeHolder, inputProp.type, inputProp.id, inputProp.minLen, inputProp.maxLen, inputProp.notAllowed
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+N.B: Under Development.

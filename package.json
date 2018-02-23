@@ -1,6 +1,16 @@
 {
   "name": "data-form",
-  "version": "0.0.0",
+  "version": "0.0.2",
+  "description": "A module for dynamic Angular forms.",
+  "author": "Shubham Bhiwaniwala",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shabyWoks/data-form.git"
+  },
+  "homepage": "https://github.com/shabyWoks/data-form",
+  "bugs": {
+    "url": "https://github.com/shabyWoks/data-form/issues"
+  },
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -8,26 +18,29 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "packagr": "ng-packagr -p ng-package.json"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
-    "@angular/compiler": "^5.2.0",
     "@angular/core": "^5.2.0",
     "@angular/forms": "^5.2.0",
     "@angular/http": "^5.2.0",
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "bootstrap": "^4.0.0",
     "core-js": "^2.4.1",
+    "data-formss": "^1.0.1",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
     "@angular/cli": "1.6.8",
-    "@angular/compiler-cli": "^5.2.0",
+    "@angular/compiler": "^5.2.6",
+    "@angular/compiler-cli": "^5.2.6",
     "@angular/language-service": "^5.2.0",
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
@@ -40,9 +53,12 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^2.1.0",
     "protractor": "~5.1.2",
+    "rollup": "^0.56.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.5.3"
+    "typescript": "^2.5.3",
+    "uglify-js": "^3.3.12"
   }
 }
