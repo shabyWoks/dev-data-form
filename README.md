@@ -1,28 +1,44 @@
 Data-Form
+v0.0.2
 
-It will provide you the html form skeleton upon getting the input object.
+npm install data-formss
 
-Generating form
+It will provide you the Angular Form skeleton upon getting the input object.
 
-Create a variable of FormInputDataArgs for every control you want.
-FormInputDataArgs data= new FormInputDataArgs();
+Details about the process of generating form
 
-data.type= type of control,
-data.labelName= "someName",
-data.placeHolder= "somePlaceHolderName",
-data.inputProp.type= "text/password/email/number/etc",
-data.inputProp.id= "someUniqueId",
-data.inputProp.minLen= "minLimitOfTextLength",
-data.inputProp.maxLen= "maxLimitOfTextLength",
-data.inputProp.notAllowed= "characters, separated, in, commas",
-data.inline= "true/false for checkboxes and radio buttons"
-data.options= [Arrays of Options i.e. key pair values]
 
+<data-form [input-parameter]= "data" [post-url]="url" (getFormData)="functionName()"></data-form>
+
+--Save these array of objects in 'data' and pass the variable as above.
+--If the form data has to be passed to some url then pass a variable 'url' having some relative or complete address.
+--If you want to get form data just pass some function to 'getFormData' and create a function with same name having one parameter in your component.
 
 1. For Input text box do the following
 type, labelName, placeHolder, inputProp.type, inputProp.id, inputProp.minLen, inputProp.maxLen, inputProp.notAllowed
 
-2. For Input text box do the following
-type, labelName, placeHolder, inputProp.type, inputProp.id, inputProp.minLen, inputProp.maxLen, inputProp.notAllowed
+{ type: 1, labelName: 'UserName ', placeHolder: 'Username', inputProp: { type: 'text', id: 'username', minLen: "4", maxLen: "15", notAllowed: "$" } },
 
-N.B: Under Development.
+2. For a checkbox/checkbox group do the following
+type, labelName, inputProp.type, inputProp.id, options.key, options.value, inline, noInOneLine, mandatory
+
+{ type: 2, labelName: 'Gender: ', inputProp: { type: '', id: 'gender' }, options: [{ value: '0', key: 'Male' }, { value: '1', key: 'Female' }], inline : false, mandatory: 1, noInOneLine: 1 },
+
+3. For a radio button/ radio group do the following
+type, labelName, inputProp.type, inputProp.id, options.key, options.value, inline, noInOneLine
+
+{ type: 3, labelName: 'Gender: ', inputProp: { type: '', id: 'gender' }, options: [{ value: '0', key: 'Male' }, { value: '1', key: 'Female' }], inline : true, noInOneLine: 1 }
+
+4. For a text area do the following
+type, labelName, placeHolder, inputProp.type, inputProp.id, inputProp.rowSize
+
+{ type: 4, labelName: 'Comment: ', inputProp: { type: '', id: 'comment', rowSize: '2' } },
+
+6. For a dropdown do the following
+type, labelName, inputProp.type, inputProp.id, options.key, options.value, inline 
+
+{ type: 6, labelName: 'Location: ', inputProp: { type: '', id: 'location' }, options: [{ value: '0', key: 'Chennai' }, { value: '1', key: 'Mumbai' }], inline : false}
+
+
+
+
